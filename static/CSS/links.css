@@ -1,0 +1,133 @@
+/* === Main Content Styling === */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Animated background gradient */
+  background-color: #f6f0c4;
+  background-image: linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%);
+  background-size: 300%;
+  animation: bg-animation 15s infinite alternate;
+}
+
+/* Keyframes for background gradient animation */
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+/* === Typography === */
+
+h1 {
+  margin-top: 2em;
+  font-size: 3.5rem;
+  font-weight: bold;
+  opacity: 0; /* likely animated in with JS */
+}
+
+h2 {
+  margin: 1em;
+  margin-top: 0;
+  color: #111111;
+  opacity: 0;
+}
+
+/* Style for any anchor links (if added) */
+.content a {
+  margin: 2em;
+  color: snow;
+}
+
+/* === Contact Form Styling === */
+
+.content form {
+  width: 55%;
+  margin-bottom: 4em;
+  opacity: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  color: snow;
+  background-color: #171717;
+  padding: 3em 2em;
+}
+
+/* Add red asterisk for required fields */
+.required::after {
+  content: "*";
+  color: red;
+}
+
+/* Input field styling */
+.content input {
+  width: 97%;
+  height: 1.5rem;
+  margin-bottom: 1em;
+}
+
+/* Grouping name fields horizontally or vertically */
+#name-sections {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Subject input margin spacing */
+.content #subject-form {
+  margin-top: 0.3em;
+  margin-bottom: 1em;
+}
+
+/* Textarea styling for the message box */
+.content textarea {
+  width: 98.5%;
+  height: 10em;
+  resize: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+/* Submit button styling */
+.content button {
+  margin-top: 10%;
+  align-self: center;
+
+  padding: 0.35em 1em;
+  border: none;
+  border-radius: 1em;
+  background-color: #d73e89;
+}
+
+/* === Responsive Adjustments for Larger Screens === */
+
+@media screen and (min-width: 850px) {
+  .content {
+    animation: bg-animation 22s infinite alternate;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .content form {
+    max-width: 40%;
+  }
+
+  .content button {
+    margin-top: 5%;
+  }
+}

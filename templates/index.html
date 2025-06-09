@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Ensure proper scaling on mobile devices -->
+    <meta 
+      name="viewport" 
+      content="width=device-width, height=device-height, initial-scale=1"
+    />
+
+    <!-- Browser tab title -->
+    <title>Onur Ozkan's Page</title>
+
+    <!-- External CSS for navigation bar and homepage-specific styling -->
+    <link rel="stylesheet" href="../static/CSS/nav.css" />
+    <link rel="stylesheet" href="../static/CSS/index.css" />
+  </head>
+  <body>
+
+    <!-- Reusable header and footer included via template -->
+    {% include 'header_footer.html' %}
+
+    <!-- Main content section -->
+    <div class="content">
+      <div id="introduction">
+        <h1>Welcome to my Website</h1>
+        
+        <div class="columntexts">
+          <!-- Summary of what users can explore on the site -->
+          <p>
+            To get more info, you can visit the About page. You can also go
+            through my projects, classes I took, and more on this site.
+          </p>
+          <p>
+            If you wish to contact me, you can go to the Links page or email me directly.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery and site-specific JS files for navigation and interactivity -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="../static/JS/nav.js"></script>
+    <script src="../static/JS/index.js"></script>
+  </body>
+</html>

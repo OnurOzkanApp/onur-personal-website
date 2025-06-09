@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Responsive scaling for mobile and desktop -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title for browser tab -->
+    <title>Onur Ozkan's Page</title>
+
+    <!-- Styles for navbar and about page layout -->
+    <link rel="stylesheet" href="../static/CSS/nav.css" />
+    <link rel="stylesheet" href="../static/CSS/about.css" />
+  </head>
+  <body>
+
+    <!-- Include common header and footer layout -->
+    {% include 'header_footer.html' %}
+
+    <!-- Main page content container -->
+    <div class="content">
+      <div class="filtered-background">
+
+        <!-- Section 1: Header and navigation buttons -->
+        <div class="sections">
+          <div class="section-1-content">
+            <h1>ABOUT ME</h1>
+
+            <!-- Navigation buttons (functionality handled via CSS/JS) -->
+            <div class="btns">
+              <button class="next">
+                <img id="downarrow" src="../static/downarrow.png" alt="" />
+              </button>
+              <button class="prev">top</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Profile picture and biography -->
+        <div class="sections">
+          <div class="section-2-content">
+
+            <!-- Profile photo -->
+            <img id="profpicture" src="../static/profphoto.jpg" />
+
+            <!-- Introductory paragraph -->
+            <p id="intro-1">
+              Hi! I'm Onur, a passionate programmer from Istanbul, Turkey,
+              currently studying at the University of Toronto. I've been living
+              in Toronto since 2017. I enjoy building creative and functional
+              software, especially in Python, C, Java, JavaScript, and R.
+              I'm particularly interested in projects that involve graphics,
+              user interaction, and backend systems.
+            </p>
+
+            <!-- Background, interests, and current goals -->
+            <p id="intro-2">
+              From a young age, I�ve been drawn to math, physics, and
+              problem solving. With both of my parents working as accountants,
+              I also developed a strong interest in economics. These influences
+              shaped my academic and professional direction. Today, I focus on
+              Software Engineering and Economics, with a growing passion for
+              Data Science where I combine analytical thinking with technical skills
+              to explore meaningful problems. You can explore some of my work
+              on the Projects page.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- jQuery and page-specific JS -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="../static/JS/nav.js"></script>
+    <script src="../static/JS/about.js"></script>
+  </body>
+</html>

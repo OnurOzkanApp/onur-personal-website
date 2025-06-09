@@ -1,0 +1,153 @@
+/* === Shared Section Layout === */
+.sections {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff6f9;
+}
+
+/* === Navigation Buttons === */
+
+/* Hide the 'top' button visually (only used functionally in JS) */
+.prev {
+  width: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* === Background Styling === */
+
+.filtered-background {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  top: 0em;
+
+  /* Pink-to-black gradient background */
+  background-color: #e84393;
+  background-image: linear-gradient(315deg, #e84393 0%, #000000 64%);
+}
+
+/* === Section 1: Page Heading and Arrow === */
+.section-1-content {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header fade-in effect handled via JS */
+h1 {
+  text-align: center;
+  opacity: 0;
+}
+
+/* === Down Arrow Animation === */
+
+@keyframes arrow-animation {
+  0%, 100% { top: 0; }
+  50% { top: 1em; }
+}
+
+/* Arrow animation button style */
+.next {
+  position: relative;
+  margin-left: 3em;
+  background-color: transparent;
+  border: none;
+  opacity: 0;
+  animation: 5s arrow-animation infinite ease;
+}
+
+#downarrow {
+  width: 2em;
+}
+
+/* === Section 2: Bio Content Grid === */
+
+.section-2-content {
+  display: grid;
+  grid-template-columns: 2.5em 1fr 2.5em;
+  grid-template-rows: 5em 11em 14em 1fr;
+  grid-template-areas:
+    ". . ."
+    ". photo ."
+    ". intro1 ."
+    ". intro2 .";
+}
+
+/* Profile image styling */
+#profpicture {
+  width: 8em;
+  height: auto;
+  grid-area: photo;
+  justify-self: center;
+}
+
+#intro-1 {
+  grid-area: intro1;
+}
+
+#intro-2 {
+  grid-area: intro2;
+  margin-top: 0;
+}
+
+/* === Responsive Layout for Wider Screens === */
+@media screen and (min-width: 850px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .section-2-content {
+    width: 75%;
+    max-width: 75%;
+
+    grid-template-columns: 5em 15em 1fr 5em;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      ". . . ."
+      ". photo intro1 ."
+      ". intro2 intro2 ."
+      ". . . .";
+  }
+
+  #profpicture {
+    width: 14em;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  #intro-1 {
+    margin-left: 3em;
+  }
+
+  #intro-2 {
+    margin-top: 5%;
+  }
+}
+
+/* === Ultra-Wide Screen Adjustments === */
+
+@media screen and (min-width: 1600px) {
+  .section-2-content {
+    grid-template-columns: 10em 15em 1fr 10em;
+  }
+}
+
+@media screen and (min-width: 2200px) {
+  .section-2-content {
+    width: 60%;
+    max-width: 60%;
+  }
+}

@@ -1,0 +1,307 @@
+/* overall layouts for the site and to make it fully responsive */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 3em 1fr 10em;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+}
+
+/* set all the links to the same font */
+a {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --------------------
+HEADER SECTION OF ALL PAGES 
+---------------------------*/
+#header {
+  grid-area: header;
+}
+/* black background */
+.headercontbackg {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+  background-color: black;
+}
+/* all the contents (i.e. links, logo etc.) */
+.headercontent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.burgericon {
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url("../burger.jpg");
+  background-size: cover;
+}
+/*
+.burgermenu {
+  display: none;
+}*/
+
+#links {
+  display: none;
+
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 3em;
+  background-color: black;
+}
+
+#menu-all-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav a {
+  color: #fff6f9;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  padding: 2%;
+}
+
+.logo {
+  flex: 0.3;
+}
+.logo img {
+  width: 9em;
+}
+
+#header .logo {
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+/* For the search bar */
+#searchbar {
+  width: 100%;
+  height: 20%;
+  margin-right: 1%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#searchtool img {
+  max-width: 5vw;
+  cursor: pointer;
+}
+
+#header form {
+  width: 80%;
+  margin-bottom: 1%;
+}
+
+#searchbar input {
+  width: 95%;
+  visibility: visible;
+  padding-left: 2%;
+
+  background-color: #e9fafa;
+  border-radius: 0.5em;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px;
+}
+
+/* --------------------
+CONTENT SECTION OF ALL PAGES 
+---------------------------*/
+.content {
+  grid-area: content;
+}
+
+/* --------------------
+FOOTER SECTION OF ALL PAGES 
+---------------------------*/
+#footer {
+  width: 100%;
+  background-color: black;
+  grid-area: footer;
+  color: snow;
+}
+
+#footercontent {
+  display: grid;
+  grid-template-columns: 2.5em 1fr 2.5em;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    ". logo ."
+    ". cinfo ."
+    ". social-media .";
+  height: 100%;
+  justify-content: center;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-size: 0.8rem;
+}
+#footercontent p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#footercontent a {
+  margin-left: 1%;
+  color: #8f1f44;
+  text-decoration: none;
+}
+
+#contactinfo {
+  width: 100%;
+
+  grid-area: cinfo;
+  justify-self: center;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#footercontent .logo {
+  grid-area: logo;
+  text-align: center;
+  margin-top: 2%;
+}
+
+#footercontent .logo img {
+  width: 14em;
+}
+
+#social-media-sec {
+  grid-area: social-media;
+  width: 50%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+  justify-self: center;
+}
+
+.social-media-icons {
+  width: 1.25em;
+}
+
+#instagram {
+  width: 1.75em;
+}
+
+/* adjust the view for bigger window sizes*/
+@media screen and (min-width: 850px) {
+  body {
+    grid-template-rows: 3em 1fr 10em;
+  }
+  /* adjust header such as removing burger menu icon */
+  .burgericon {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+  /* show links instead of hiding them like on mobile */
+  .burgermenu {
+    flex: 0.8;
+  }
+
+  .logo img {
+    width: 11em;
+  }
+
+  #searchtool img {
+    max-width: 2em;
+  }
+
+  #searchbar input {
+    width: 8rem;
+    visibility: hidden;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px;
+  }
+
+  #links {
+    display: block;
+    width: 90%;
+    margin-right: 2%;
+    position: unset;
+    background-color: transparent;
+  }
+  #links a {
+    padding: 2em 1em;
+  }
+
+  #menu-all-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* adjust the logo position on Pcs */
+  .logo {
+    flex: 0.25;
+  }
+}
+
+/* adjust the footer for bigger window sizes*/
+@media screen and (min-width: 945px) {
+  /* adjust the footer layout*/
+  #footercontent {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      ". . ."
+      "cinfo logo social-media"
+      ". . .";
+    font-size: 1rem;
+  }
+
+  /* change the position of the contact info on Pc view */
+  #contactinfo {
+    justify-content: flex-start;
+    grid-area: cinfo;
+  }
+
+  #footercontent .logo {
+    align-self: center;
+    margin-top: 0;
+  }
+
+  #footercontent .logo img {
+    width: 18em;
+  }
+
+  #social-media-sec {
+    margin-left: 13em;
+  }
+}
+
+/* adjust the view for bigger window sizes*/
+@media screen and (min-width: 1600px) {
+  body {
+    grid-template-rows: 4em 1fr 10em;
+  }
+}
+
+/* ultrawide adjustment */
+@media screen and (min-width: 2400px) {
+  body {
+    grid-template-rows: 5em 1fr 10em;
+  }
+}

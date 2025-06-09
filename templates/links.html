@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Responsive layout for all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title shown in browser tab -->
+    <title>Onur Ozkan's Page</title>
+
+    <!-- Navigation and links page-specific styles -->
+    <link rel="stylesheet" href="../static/CSS/nav.css" />
+    <link rel="stylesheet" href="../static/CSS/links.css" />
+  </head>
+  <body>
+
+    <!-- Include header and footer layout -->
+    {% include 'header_footer.html' %}
+
+    <!-- Page content -->
+    <div class="content">
+      <h1>Links</h1>
+
+      <h2>Contact Me</h2>
+
+      <!-- Contact form -->
+      <form method="POST">
+        <div id="name-sections">
+          <!-- First name input -->
+          <label class="required" for="first-name">First Name</label>
+          <input name="firstname" required autofocus />
+
+          <!-- Last name input -->
+          <label class="required" for="last-name">Last Name</label>
+          <input name="lastname" required />
+        </div>
+
+        <!-- Email input -->
+        <label class="required" for="email">Email</label>
+        <input name="email" required />
+
+        <!-- Optional subject field -->
+        <label for="subject">Subject</label>
+        <input id="formsubject" name="subject" />
+
+        <!-- Message field -->
+        <label class="required" for="email-content">Message</label>
+        <textarea name="emailcontent" required></textarea>
+
+        <!-- Submit button with hover interactions -->
+        <button
+          type="submit"
+          onmouseover="buttonHover(this)"
+          onmouseout="buttonChangeBack(this)"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <!-- JS for navigation and contact button interactions -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="../static/JS/nav.js"></script>
+    <script src="../static/JS/links.js"></script>
+  </body>
+</html>

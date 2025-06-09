@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Character encoding and browser compatibility -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Responsive scaling support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title shown in browser tab -->
+    <title>Onur Ozkan's Page</title>
+
+    <!-- Styles for navigation and thank-you message layout -->
+    <link rel="stylesheet" href="../static/CSS/nav.css" />
+    <link rel="stylesheet" href="../static/CSS/thankyou.css" />
+  </head>
+  <body>
+
+    <!-- Reusable header and footer layout -->
+    {% include 'header_footer.html' %}
+
+    <!-- Main content -->
+    <div class="content">
+      <h1>Thank You for contacting</h1>
+      <h2>You can return to the Home page</h2>
+
+      <!-- Home icon link to return -->
+      <a href="/"><img src="../static/homeicon.png" alt="Home icon" /></a>
+    </div>
+
+    <!-- jQuery and custom JS for navigation and effects -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="../static/JS/nav.js"></script>
+    <script src="../static/JS/thankyou.js"></script>
+  </body>
+</html>

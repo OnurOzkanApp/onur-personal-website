@@ -1,0 +1,79 @@
+/* === Page Background & Base Text Color === */
+
+body {
+  color: #fff6f9;
+  background-color: #191919;
+}
+
+/* === Main Content Container === */
+
+.content {
+  margin-top: 5vh;
+  margin-bottom: 20vh;
+}
+
+/* Link color styling */
+a {
+  color: #731a38;
+}
+
+/* === Background and Grid Layout === */
+
+.filtered-background {
+  position: relative;
+  top: 0em;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 2.5em 1fr 2.5em;
+  grid-template-rows: 10em 10em 2fr 2fr;
+  grid-template-areas:
+    ". . ."
+    ". header ."
+    ". quick-links ."
+    ". . .";
+}
+
+/* Section: Page Heading */
+.intro-header {
+  grid-area: header;
+}
+
+/* Styling for the main page title */
+h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+/* === Section: Quick Links Result Area === */
+
+.quick-links {
+  grid-area: quick-links;
+
+  display: grid;
+  grid-template-columns: 2em 1fr 2em;
+  grid-template-rows: 5em 1fr 1fr 1fr;
+  grid-template-areas:
+    ". . ."
+    ". header ."
+    ". links ."
+    ". links .";
+}
+
+/* Subheading inside the quick-links section */
+.quick-links h2 {
+  grid-area: header;
+  text-align: center;
+}
+
+/* List of result links shown */
+.result-links {
+  grid-area: links;
+  text-align: center;
+}
+
+/* Fallback message if no results found */
+.no-result-msg {
+  grid-area: links;
+  text-align: center;
+}

@@ -1,0 +1,10 @@
+TO DO:
+    -links page search and form handle both
+    -projects list of programming languages
+    -arrow animation stopped after clicking the first time esp on mobile?
+    -about page 709px and <265 check
+    -home page adjust for ipad!
+    
+
+    LONGTERM:
+        -fix the content for long window heights

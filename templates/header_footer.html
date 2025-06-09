@@ -1,0 +1,67 @@
+<!-- === HEADER SECTION === -->
+<div id="header">
+  <!-- Decorative header background image -->
+  <div id="headerpic"></div>
+
+  <!-- Container for navigation and logo -->
+  <div class="headercontbackg">
+    <div class="headercontent">
+
+      <!-- Burger menu icon (mobile toggle) -->
+      <div class="burgericon"></div>
+
+      <!-- Dropdown navigation menu -->
+      <div class="burgermenu">
+        <div class="linksbox">
+          {% include 'nav.html' %}
+        </div>
+      </div>
+
+      <!-- Website logo -->
+      <div class="logo">
+        <img src="../static/logo.png" alt="Site logo" />
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- === FOOTER SECTION === -->
+<div id="footer">
+  <div id="footercontent">
+
+    <!-- Logo text in footer -->
+    <div class="logo">
+      <img src="../static/logotext.png" alt="Site logo text" />
+    </div>
+
+    <!-- Contact email -->
+    <div id="contactinfo">
+      <p>Contact Info:</p>
+      <a
+        onmouseover="hoverLink(this)"
+        onclick="clickLink(this)"
+        onmouseout="changeBackLink(this)"
+        href="mailto:onurozkanapp@gmail.com"
+      >
+        onurozkanapp@gmail.com
+      </a>
+    </div>
+
+    <!-- Social media icons -->
+    <div id="social-media-sec">
+      <a href="https://twitter.com/OnurOzkan98" target="_blank" rel="noopener noreferrer">
+        <img class="social-media-icons" src="../static/twitter-icon.png" alt="Twitter" />
+      </a>
+
+      <a href="https://www.linkedin.com/in/onur-ozkan-286812149/" target="_blank" rel="noopener noreferrer">
+        <img class="social-media-icons" src="../static/linkedin.png" alt="LinkedIn" />
+      </a>
+
+      <a href="https://www.instagram.com/onurozkan98/" target="_blank" rel="noopener noreferrer">
+        <img id="instagram" class="social-media-icons" src="../static/instagram-icon.png" alt="Instagram" />
+      </a>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<nav id="links">
+  <div id="menu-all-content">
+    <!-- search bar -->
+    <div id="searchbar">
+      <div id="searchtool" onclick="toggleSearchBar()">
+        <img src="../static/search.svg" />
+      </div>
+      <form method="POST">
+        <input
+          id="bar"
+          type="text"
+          name="search"
+          placeholder="Search"
+          list="search-results"
+        />
+        <datalist id="search-results">
+          <option value="Home"></option>
+          <option value="About"></option>
+          <option value="Classes"></option>
+          <option value="Projects"></option>
+          <option value="Links"></option>
+        </datalist>
+      </form>
+    </div>
+    <!-- navigation links -->
+    <a
+      onmouseover="hoverChangeBackground(this)"
+      onclick="clickLink(this)"
+      onmouseout="changeBackLink(this)"
+      href="/"
+      >Home</a
+    >
+    <a
+      onmouseover="hoverChangeBackground(this)"
+      onclick="clickLink(this)"
+      onmouseout="changeBackLink(this)"
+      href="/about"
+      >About</a
+    >
+    <a
+      onmouseover="hoverChangeBackground(this)"
+      onclick="clickLink(this)"
+      onmouseout="changeBackLink(this)"
+      href="/projects"
+      >Projects</a
+    >
+    <a
+      onmouseover="hoverChangeBackground(this)"
+      onclick="clickLink(this)"
+      onmouseout="changeBackLink(this)"
+      href="/classes"
+      >Classes</a
+    >
+    <a
+      onmouseover="hoverChangeBackground(this)"
+      onclick="clickLink(this)"
+      onmouseout="changeBackLink(this)"
+      href="/links"
+      >Links</a
+    >
+  </div>
+</nav>

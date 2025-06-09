@@ -1,0 +1,92 @@
+/* === Base Layout === */
+body {
+  font-family: "Times New Roman", arial, sans-serif;
+
+  /* Grid layout (if applicable in parent) */
+  grid-template-rows: 15em 1fr 10em;
+
+  /* Light gray background */
+  background-color: #e8e8e8;
+}
+
+/* === Header Section === */
+#headerpic {
+  background-image: url("../space2.jpg");
+  background-size: cover;
+  border-bottom: solid;
+  border-bottom-width: 0.25rem;
+  height: 100%;
+}
+
+/* Transparent header background for the homepage only */
+/* Default header is black (set in nav.css) */
+.headercontbackg {
+  background-color: transparent;
+  transition: 600ms cubic-bezier(0.075, 0.82, 0.165, 1) 255ms;
+}
+
+/* Class added dynamically via JavaScript (index.js) */
+/* Switches header background from transparent to black */
+.toggleBackground {
+  background-color: black !important;
+  transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* === Main Content Section === */
+.content {
+  margin-bottom: 5em;
+}
+
+#introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+/* Main welcome header */
+h1 {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+}
+
+/* Container for introductory text paragraphs */
+.columntexts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.columntexts p {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1.25rem;
+  color: #696969;
+  opacity: 0;
+}
+
+/* === Responsive Design for Larger Screens === */
+@media screen and (min-width: 850px) {
+  .content {
+    margin-bottom: 14em;
+  }
+
+  h1 {
+    font-size: 6.5rem;
+  }
+
+  /* Paragraphs side-by-side instead of stacked */
+  .columntexts {
+    flex-direction: row;
+  }
+
+  .columntexts p {
+    width: 30%;
+  }
+}

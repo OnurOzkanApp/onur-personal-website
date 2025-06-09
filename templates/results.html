@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Character encoding and browser compatibility -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Responsive layout support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Browser tab title -->
+    <title>Onur Ozkan's Page</title>
+
+    <!-- Styles for navigation and search results layout -->
+    <link rel="stylesheet" href="../static/CSS/nav.css" />
+    <link rel="stylesheet" href="../static/CSS/results.css" />
+  </head>
+  <body>
+
+    <!-- Include header and footer template -->
+    {% include 'header_footer.html' %}
+
+    <!-- Page content wrapper -->
+    <div class="content">
+      <div class="filtered-background">
+
+        <!-- Search results page title -->
+        <div class="intro-header">
+          <h1>Search Results</h1>
+        </div>
+
+        <!-- Section with dynamic quick links based on query -->
+        <div class="quick-links">
+          <h2>Quick Links</h2>
+
+          <!-- Display message if no results found -->
+          <div class="no-result-msg">
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <h3 id="newmessage">{{messages[0]}}</h3>
+              {% endif %}
+            {% endwith %}
+          </div>
+
+          <!-- Loop through result links and generate anchor tags -->
+          <div class="result-links">
+            {% for item in results %}
+              {% if item[0] == 'home' %}
+                <a
+                  href="/"
+                  onmouseover="hoverLink(this)"
+                  onclick="clickLink(this)"
+                  onmouseout="changeBackLink(this)"
+                >{{ item[0] }}</a>
+              {% else %}
+                <a
+                  href="/{{ item[0] }}"
+                  onmouseover="hoverLink(this)"
+                  onclick="clickLink(this)"
+                  onmouseout="changeBackLink(this)"
+                >{{ item[0] }}</a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript for navigation and link interactions -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="../static/JS/nav.js"></script>
+  </body>
+</html>
