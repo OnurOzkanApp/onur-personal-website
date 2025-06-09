@@ -76,7 +76,7 @@ This project is for personal and portfolio use. Please do not reuse content with
 #### 🏠 Homepage
 <img src="screenshots/homepage.png" width="600" alt="Homepage preview" />
 
-#### 🏠 Homepage with Animation
+#### 🏠 Homepage with footer
 <img src="screenshots/homepage2.png" width="600" alt="Homepage with footer preview" />
 
 #### 👤 About Me (Header View)
