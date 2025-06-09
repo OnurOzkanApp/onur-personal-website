@@ -68,3 +68,22 @@ Feel free to reach out via email or check out my socials:
 ## 📌 License
 
 This project is for personal and portfolio use. Please do not reuse content without permission.
+
+---
+
+## 📸 Preview Screenshots
+
+#### 🏠 Homepage
+<img src="screenshots/homepage.png" width="600" alt="Homepage preview" />
+
+#### 🏠 Homepage with Animation
+<img src="screenshots/homepage2.png" width="600" alt="Homepage with footer preview" />
+
+#### 👤 About Me (Header View)
+<img src="screenshots/aboutme.png" width="600" alt="About page initial" />
+
+#### 👤 About Me (Bio Section)
+<img src="screenshots/aboutme2.png" width="600" alt="About page biography section" />
+
+#### 📬 Links / Contact Page
+<img src="screenshots/links.png" width="600" alt="Contact form preview" />
